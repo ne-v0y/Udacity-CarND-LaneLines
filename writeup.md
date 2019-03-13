@@ -17,36 +17,26 @@ The goals / steps of this project are the following:
 
 ---
 
-### Reflection
+The Project
+---
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I applied a Gaussain Blur with kernel size of 5 to smooth out sharpe edges. Then I used the Canny edge detection algorithm to find all the edges. With a a pre-defiend polygon that foucses on the bottom part of the image, I applied the Hough Line transformation to find the lanes.
+**Step 1:** Set up the [CarND Term1 Starter Kit](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/83ec35ee-1e02-48a5-bdb7-d244bd47c2dc/lessons/8c82408b-a217-4d09-b81d-1bda4c6380ef/concepts/4f1870e0-3849-43e4-b670-12e6f2d4b7a7) if you haven't already.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by finding line segements that have close slope(+/- 0.01 tolerance) and group them as candidates for `left_lane` and `right_lane`. To obtain an approximate threshold for the slope, I ran the test images to narrow down the range. For `right_lane`, the slope range is 0.5 to 10. For `left_lane`, the range is -0.5 to -0.8. I kept the range big in order to accomendate different siutations.
+**Step 2:** Open the code in a Jupyter Notebook
 
-Here is the step by step result:
+You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out [Udacity's free course on Anaconda and Jupyter Notebooks](https://classroom.udacity.com/courses/ud1111) to get started.
 
-[grey]: ./writeup_img/grey.png "Grey and smoothed"  
-[canny]: ./writeup_img/edge.png "Canny edge detection"  
-[roi]: ./writeup_img/roi_edges.png "Edge in region of interest"  
-[line]: ./writeup_img/extrapolation.png "Line extrapolation"  
-[result]: ./writeup_img/result.png "Final result"  
+Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
 
-For video processing, I added KCF tracking between frames when a detection failed. The green line in the image is a tracking result while all red lines are detections.
-[tracking on left lane when detection failed]: ./writeup/detection_failed_tracking.png "Tracking left lane when detection failed"
+`> jupyter notebook`
 
+A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
 
-### 2. Identify potential shortcomings with your current pipeline
+**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
 
-
-One potential shortcoming would be parameter tuning. The threshold for lane candidates is hard-coded. 
-
-Another shortcoming could be...
+## How to write a README
+A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
 
-### 3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to add another layer of verification: for example, a color based detection to enhance the results, since Hough Transformation wasn't very error-prone on dash lanes.
-
-Another potential improvement could be to ...
