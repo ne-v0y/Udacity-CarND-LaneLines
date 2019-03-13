@@ -1,8 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+## Writeup
 
 ---
 
@@ -29,14 +27,14 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 Here is the step by step result:
 
-![grey and smoothed][./writeup_img/grey.png]
-![Canny edge detection][./writeup_img/edge.png]
-![edges in region of interest][./writeup_img/roi_edges.png]
-![extrapolation][./writeup_img/extrapolation.png]
-![final result][./writeup_img/result.png]
+[grey and smoothed]: ./writeup_img/grey.png "Grey and smoothed"
+[Canny edge detection]: ./writeup_img/edge.png "Canny edge detection"
+[edges in region of interest]: ./writeup_img/roi_edges.png "Edge in region of interest"
+[extrapolation]: ./writeup_img/extrapolation.png "Line extrapolation"
+[final result]: ./writeup_img/result.png "Final result"
 
 For video processing, I added KCF tracking between frames when a detection failed. The green line in the image is a tracking result while all red lines are detections.
-![tracking on left lane when detection failed][./writeup/detection_failed_tracking.png]
+[tracking on left lane when detection failed]: ./writeup/detection_failed_tracking.png "Tracking left lane when detection failed"
 
 
 ### 2. Identify potential shortcomings with your current pipeline
