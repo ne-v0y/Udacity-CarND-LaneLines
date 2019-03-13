@@ -27,11 +27,11 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 Here is the step by step result:
 
-[grey and smoothed]: ./writeup_img/grey.png "Grey and smoothed"
-[Canny edge detection]: ./writeup_img/edge.png "Canny edge detection"
-[edges in region of interest]: ./writeup_img/roi_edges.png "Edge in region of interest"
-[extrapolation]: ./writeup_img/extrapolation.png "Line extrapolation"
-[final result]: ./writeup_img/result.png "Final result"
+[grey and smoothed]: ./writeup_img/grey.png "Grey and smoothed"  
+[Canny edge detection]: ./writeup_img/edge.png "Canny edge detection"  
+[edges in region of interest]: ./writeup_img/roi_edges.png "Edge in region of interest"  
+[extrapolation]: ./writeup_img/extrapolation.png "Line extrapolation"  
+[final result]: ./writeup_img/result.png "Final result"  
 
 For video processing, I added KCF tracking between frames when a detection failed. The green line in the image is a tracking result while all red lines are detections.
 [tracking on left lane when detection failed]: ./writeup/detection_failed_tracking.png "Tracking left lane when detection failed"
